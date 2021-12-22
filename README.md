@@ -4,8 +4,8 @@ Quelques scripts que j'ai écris pour faciliter certaines tâches redondantes da
 
 ## Outils nécessaires
 
-Node.js 16.13.1
-NPM 8.3.0
+* Node.js 16.13.1
+* NPM 8.3.0
 
 Ces scripts pourraient fonctionner avec d'autres versions de Node mais je ne peux le garantir.
 
