@@ -40,7 +40,7 @@ const options = program.opts();
 		const nomEquipe = `Équipe ${i}`;
 		const worksheetEquipe = evaluations.addWorksheet(nomEquipe);
 		worksheetEquipe.model = template.model;
-		worksheetEquipe.name =nomEquipe;
+		worksheetEquipe.name = nomEquipe;
 
 		if (celluleGroupe && numeroGroupe) {
 			worksheetEquipe.getCell(celluleGroupe).value = `Groupe ${numeroGroupe}`;

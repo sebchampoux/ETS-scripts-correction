@@ -29,6 +29,17 @@ Tous les scripts peuvent être exécutés ainsi: `node <script> <paramètres>`.
 ### Création des grilles d'évaluation (individuelles)
 Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_ qui est une grille d'évaluation vierge, et une liste d'étudiants au format CSV générée par Moodle (voir point précédent). Ce script va générer, dans le fichier Excel, une copie de la grille d'évaluation vierge au nom de chaque étudiant(e).
 
+|Paramètre|Description|Obligatoire|Par défaut|
+|-|-|-|-|
+|`-f|--fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
+|`-le, --liste-etudiants <file>`|Fichier de liste d\'étudiants au format CSV, tel que généré par Moodle.|Oui||
+|`-t|--template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
+|`-g|--numero-groupe <groupe>`|Numéro du groupe.|||
+|`-c|--cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
+|`-ce, --cellule-etudiant <cellule>`|Identifiant de la cellule dans lequel indiquer le nom de l\'étudiant(e). ex. "A3"|||
+|`-ip, --index-prenom <index>`|Index (à partir de 0) de la colonne du CSV dans laquelle est enregistré les prénoms.||0|
+|`-in, --index-nom <index>`|Index (à partir de 0) de la colonne du CSV dans laquelle est enregistré les noms de famille.||1|
+
 ### Création des grilles d'évaluation (équipes)
 Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_ qui est une grille d'évaluation vierge. Ce script va générer, dans le fichier Excel, une copie de la grille d'évaluation vierge pour chaque équipe.
 
