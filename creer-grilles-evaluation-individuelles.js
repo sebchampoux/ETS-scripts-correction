@@ -1,7 +1,6 @@
 import { program } from 'commander';
-import { parse } from 'csv';
-import { createReadStream } from 'fs';
 import ExcelJs from 'exceljs';
+import { getListeEtudiants } from './get-liste-etudiants.js';
 
 const { Workbook } = ExcelJs;
 
@@ -20,15 +19,6 @@ program
 program.parse(process.argv);
 
 const options = program.opts();
-
-const getListeEtudiants = async (fichierListeEtudiants) => {
-	const result = [];
-	const parser = createReadStream(fichierListeEtudiants).pipe(parse());
-	for await (const etudiant of parser) {
-		result.push(etudiant);
-	}
-	return result;
-};
 
 (async () => {
 	const {
