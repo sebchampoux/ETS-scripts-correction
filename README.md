@@ -55,6 +55,12 @@ Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_
 ### Extraction des grilles d'évaluation (individuelles et équipes)
 Ce script parcours un fichier Excel contenant les grilles d'évaluation d'une classe (voir scripts précédents), et pour chaque étudiant/équipe, crée un nouveau fichier Excel contenant uniquement la grille d'évaluation de cet étudiant/cette équipe.
 
+|Paramètre|Description|Obligatoire|Par défaut|
+|-|-|-|-|
+|`-f|--fichier-evaluations <file>`|Fichier Excel dans lequel seront extraites.|Oui||
+|`-t, --template-name <name>`|Nom de la worksheet template, qui sera ignorée.||\_\_TEMPLATE\_\_|
+|`-d, --destination <folder_name>`|Dossier dans lequel seront enregistrées les grilles d\'évaluation extraites. Ce dossier doit déjà exister.||./grilles/|
+
 ### Extraction des notes (individuelles)
 Ce script reçoit un fichier Excel contenant les grilles d'évaluation des étudiants (voir script précédent), et une liste de classe CSV générée par Moodle. Ce script parcours la liste d'étudiants, puis les grilles d'évaluation, et recopie la note de chaque étudiant dans la liste de classe.
 
