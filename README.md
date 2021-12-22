@@ -58,3 +58,8 @@ Une fois que les notes sont extraites dans la liste d'étudiants, cette liste pe
 
 ### Impression des notes (équipes)
 Malheureusement, je n'ai pas trouvé de moyen facile d'extraire les notes dans la liste de classe pour les travaux d'équipe. À la place, j'ai fait ce script qui va imprimer les notes de toutes les équipe dans la console. Il faut quand même entrer les notes manuellement dans Moodle, mais c'est plus rapide que de devoir retourner voir la grille Excel de chaque équipe.
+
+|Paramètre|Description|Obligatoire|Par défaut|
+|-|-|-|-|
+|`-f, --fichier-evaluations <fichier>`|Fichier Excel contenant les grilles d\'évaluation des équipes.|Oui||
+|`-c, --cellule-note <cellule>`|Identifiant de la cellule contenant la note de l\'équipe, ex. A1.|Oui||
