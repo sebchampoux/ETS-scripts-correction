@@ -31,11 +31,11 @@ Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_
 
 |Paramètre|Description|Obligatoire|Par défaut|
 |-|-|-|-|
-|`-f|--fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
+|`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
 |`-le, --liste-etudiants <file>`|Fichier de liste d\'étudiants au format CSV, tel que généré par Moodle.|Oui||
-|`-t|--template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
-|`-g|--numero-groupe <groupe>`|Numéro du groupe.|||
-|`-c|--cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
+|`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
+|`-g, --numero-groupe <groupe>`|Numéro du groupe.|||
+|`-c, --cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
 |`-ce, --cellule-etudiant <cellule>`|Identifiant de la cellule dans lequel indiquer le nom de l\'étudiant(e). ex. "A3"|||
 |`-ip, --index-prenom <index>`|Index (à partir de 0) de la colonne du CSV dans laquelle est enregistré les prénoms.||0|
 |`-in, --index-nom <index>`|Index (à partir de 0) de la colonne du CSV dans laquelle est enregistré les noms de famille.||1|
@@ -45,19 +45,19 @@ Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_
 
 |Paramètre|Description|Obligatoire|Par défaut|
 |-|-|-|-|
-|`-f|--fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
-|`-n|--nombre-equipes <nbr>`|Nombre d'équipes. Des grilles d'évaluation seront créées pour les équipes 1 à n.|Oui||
-|`-e|--exclure-equipes <nbrs>`|Numéros d'équipes inutilisés. Écrire comme une string, séparer les numéros par une virgule, ex. "1, 5, 7".|||
-|`-t|--template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
-|`-g|--numero-groupe <groupe>`|Numéro du groupe.|||
-|`-c|--cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
+|`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
+|`-n, --nombre-equipes <nbr>`|Nombre d'équipes. Des grilles d'évaluation seront créées pour les équipes 1 à n.|Oui||
+|`-e, --exclure-equipes <nbrs>`|Numéros d'équipes inutilisés. Écrire comme une string, séparer les numéros par une virgule, ex. "1, 5, 7".|||
+|`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
+|`-g, --numero-groupe <groupe>`|Numéro du groupe.|||
+|`-c, --cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
 
 ### Extraction des grilles d'évaluation (individuelles et équipes)
 Ce script parcours un fichier Excel contenant les grilles d'évaluation d'une classe (voir scripts précédents), et pour chaque étudiant/équipe, crée un nouveau fichier Excel contenant uniquement la grille d'évaluation de cet étudiant/cette équipe.
 
 |Paramètre|Description|Obligatoire|Par défaut|
 |-|-|-|-|
-|`-f|--fichier-evaluations <file>`|Fichier Excel dans lequel seront extraites.|Oui||
+|`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel seront extraites.|Oui||
 |`-t, --template-name <name>`|Nom de la worksheet template, qui sera ignorée.||\_\_TEMPLATE\_\_|
 |`-d, --destination <folder_name>`|Dossier dans lequel seront enregistrées les grilles d\'évaluation extraites. Ce dossier doit déjà exister.||./grilles/|
 
@@ -75,7 +75,7 @@ Une fois que les notes sont extraites dans la liste d'étudiants, cette liste pe
 
 |Paramètre|Description|Obligatoire|Par défaut|
 |-|-|-|-|
-|`-f|--fichier-evaluations <file>`|Fichier Excel dans lequel sont les grilles d\'évaluation.|Oui||
+|`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel sont les grilles d\'évaluation.|Oui||
 |`-le, --liste-etudiants <file>`|Fichier de liste d\'étudiants au format CSV, dans lequel seront enregistrées les notes.|Oui||
 |`-cn, --cellule-note <cellule>`|Cellule de la grille d\'évaluation dans laquelle se trouve la note de l\'étudiant.|Oui||
 |`-ir, --index-resultat <index>`|Index (à partir de 0) de la colonne du CSV dans laquelle doit être enregistrée la note de l\'étudiant pour ce travail.|Oui||
