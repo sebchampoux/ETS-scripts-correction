@@ -1,6 +1,6 @@
 import { program } from 'commander';
 import ExcelJs from 'exceljs';
-import { getListeEtudiants } from './get-liste-etudiants.js';
+import { getListeEtudiants } from './utils/get-liste-etudiants.js';
 import { stringify } from 'csv';
 import { writeFile } from 'fs';
 
