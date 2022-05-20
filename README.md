@@ -46,6 +46,7 @@ Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_
 |Paramètre|Description|Obligatoire|Par défaut|
 |-|-|-|-|
 |`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
+|`-d, --debut <nbr>`|Numéro de la première équipe si la numérotation ne commence pas à 0. Le script va créer des grilles pour les équipes # d à (d + n) inclusivement.||1|
 |`-n, --nombre-equipes <nbr>`|Nombre d'équipes. Des grilles d'évaluation seront créées pour les équipes 1 à n.|Oui||
 |`-e, --exclure-equipes <nbrs>`|Numéros d'équipes inutilisés. Écrire comme une string, séparer les numéros par une virgule, ex. "1,5,7".|||
 |`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|

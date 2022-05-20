@@ -8,6 +8,7 @@ program.version('1.0.0');
 program
 	.requiredOption('-f, --fichier-evaluations <file>', 'Fichier Excel dans lequel seront créées les grilles d\'évaluation.')
 	.requiredOption('-n, --nombre-equipes <nbr>', 'Nombre d\'équipes. Des grilles d\'évaluation seront créées pour les équipes 1 à n.')
+	.option('-d, --debut <nbr>', 'Numéro de la première équipe si la première équipe n\'est pas la #1.', 1)
 	.option('-e, --exclure-equipes <nbrs>', 'Numéros d\'équipes inutilisés. Écrire comme une string, séparer les numéros par une virgule, ex. "1, 5, 7".', '')
 	.option('-t, --template-name <name>', 'Nom de la worksheet qui sera utilisée comme modèle pour les grilles d\'évaluation.', '__TEMPLATE__')
 	.option('-g, --numero-groupe <groupe>', 'Numéro du groupe', null)
@@ -24,6 +25,7 @@ const options = program.opts();
 		fichierEvaluations,
 		templateName,
 		exclureEquipes,
+		debut,
 		nombreEquipes: nbrEquipesString
 	} = options;
 
@@ -33,7 +35,7 @@ const options = program.opts();
 	const equipesExclues = exclureEquipes.split(',').map(n => parseInt(n, 10));
 	const nombreEquipes = parseInt(nbrEquipesString, 10);
 
-	for (let i = 1; i <= nombreEquipes; i++) {
+	for (let i = debut; i <= (debut + nombreEquipes); i++) {
 		if (equipesExclues.includes(i)) {
 			continue;
 		}
