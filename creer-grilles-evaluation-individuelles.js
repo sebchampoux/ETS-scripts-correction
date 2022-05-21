@@ -1,6 +1,6 @@
 import { program } from 'commander';
 import ExcelJs from 'exceljs';
-import { getListeEtudiants } from './utils/get-liste-etudiants';
+import { getListeEtudiants } from './utils/get-liste-etudiants.js';
 
 const { Workbook } = ExcelJs;
 

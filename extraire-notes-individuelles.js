@@ -40,7 +40,7 @@ const options = program.opts();
 		const nomEtudiant = `${etudiant[indexPrenom]} ${etudiant[indexNom]}`;
 		const grilleEtudiant = evaluations.worksheets.find(s => s.name === nomEtudiant);
 		if (!grilleEtudiant) {
-			throw new Error(`Pas trouvé la grille pour ${nomEtudiant}`);
+			console.warn(`Pas trouvé la grille pour ${nomEtudiant}`);
 			return;
 		}
 		const noteEtudiant = grilleEtudiant.getCell(celluleNote).value.result ?? 0;
