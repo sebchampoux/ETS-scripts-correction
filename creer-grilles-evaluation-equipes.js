@@ -25,7 +25,7 @@ const options = program.opts();
 		fichierEvaluations,
 		templateName,
 		exclureEquipes,
-		debut,
+		debut: debutString,
 		nombreEquipes: nbrEquipesString
 	} = options;
 
@@ -33,6 +33,7 @@ const options = program.opts();
 	await evaluations.xlsx.readFile(fichierEvaluations);
 	const template = evaluations.getWorksheet(templateName);
 	const equipesExclues = exclureEquipes.split(',').map(n => parseInt(n, 10));
+	const debut = parseInt(debutString, 10);
 	const nombreEquipes = parseInt(nbrEquipesString, 10);
 
 	for (let i = debut; i <= (debut + nombreEquipes); i++) {
