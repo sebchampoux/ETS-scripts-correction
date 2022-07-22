@@ -10,7 +10,7 @@ program
 	.requiredOption('-n, --nombre-equipes <nbr>', 'Nombre d\'équipes. Des grilles d\'évaluation seront créées pour les équipes 1 à n.')
 	.option('-d, --debut <nbr>', 'Numéro de la première équipe si la première équipe n\'est pas la #1.', 1)
 	.option('-e, --exclure-equipes <nbrs>', 'Numéros d\'équipes inutilisés. Écrire comme une string, séparer les numéros par une virgule, ex. "1, 5, 7".', '')
-	.option('-t, --template-name <name>', 'Nom de la worksheet qui sera utilisée comme modèle pour les grilles d\'évaluation.', '__TEMPLATE__')
+	.option('-t, --template-name <name>', 'Nom de la worksheet qui sera utilisée comme modèle pour les grilles d\'évaluation.', 'Sheet1')
 	.option('-g, --numero-groupe <groupe>', 'Numéro du groupe', null)
 	.option('-c, --cellule-groupe <cellule>', 'Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"', null);
 

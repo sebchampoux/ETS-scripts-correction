@@ -8,7 +8,7 @@ program.version('1.0.0');
 
 program
 	.requiredOption('-f, --fichier-evaluations <file>', 'Fichier Excel dans lequel seront extraites.')
-	.option('-t, --template-name <name>', 'Nom de la worksheet template, qui sera ignorée.', '__TEMPLATE__')
+	.option('-t, --template-name <name>', 'Nom de la worksheet template, qui sera ignorée.', 'Sheet1')
 	.option('-d, --destination <folder_name>', 'Dossier dans lequel seront enregistrées les grilles d\'évaluation extraites. Ce dossier doit déjà exister.', './grilles/');
 
 program.parse(process.argv);

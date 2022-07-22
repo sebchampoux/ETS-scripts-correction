@@ -9,7 +9,7 @@ program.version('1.0.0');
 program
 	.requiredOption('-f, --fichier-evaluations <file>', 'Fichier Excel dans lequel seront créées les grilles d\'évaluation.')
 	.requiredOption('-le, --liste-etudiants <file>', 'Fichier de liste d\'étudiants au format CSV, tel que généré par Moodle.')
-	.option('-t, --template-name <name>', 'Nom de la worksheet qui sera utilisée comme modèle pour les grilles d\'évaluation.', '__TEMPLATE__')
+	.option('-t, --template-name <name>', 'Nom de la worksheet qui sera utilisée comme modèle pour les grilles d\'évaluation.', 'Sheet1')
 	.option('-g, --numero-groupe <groupe>', 'Numéro du groupe', null)
 	.option('-c, --cellule-groupe <cellule>', 'Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"', null)
 	.option('-ce, --cellule-etudiant <cellule>', 'Identifiant de la cellule dans lequel indiquer le nom de l\'étudiant(e). ex. "A3"', null)
