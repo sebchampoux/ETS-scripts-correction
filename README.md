@@ -33,7 +33,7 @@ Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_
 |-|-|-|-|
 |`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel seront créées les grilles d'évaluation.|Oui||
 |`-le, --liste-etudiants <file>`|Fichier de liste d\'étudiants au format CSV, tel que généré par Moodle.|Oui||
-|`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
+|`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||Sheet1|
 |`-g, --numero-groupe <groupe>`|Numéro du groupe.|||
 |`-c, --cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
 |`-ce, --cellule-etudiant <cellule>`|Identifiant de la cellule dans lequel indiquer le nom de l\'étudiant(e). ex. "A3"|||
@@ -49,7 +49,7 @@ Ce script reçoit un fichier Excel (`xlsx`) contenant au minimum une _worksheet_
 |`-d, --debut <nbr>`|Numéro de la première équipe si la numérotation ne commence pas à 0. Le script va créer des grilles pour les équipes # d à (d + n) inclusivement.||1|
 |`-n, --nombre-equipes <nbr>`|Nombre d'équipes. Des grilles d'évaluation seront créées pour les équipes 1 à n.|Oui||
 |`-e, --exclure-equipes <nbrs>`|Numéros d'équipes inutilisés. Écrire comme une string, séparer les numéros par une virgule, ex. "1,5,7".|||
-|`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||\_\_TEMPLATE\_\_|
+|`-t, --template-name <name>`|Nom de la worksheet qui sera utilisée comme modèle pour les grilles d'évaluation.||Sheet1|
 |`-g, --numero-groupe <groupe>`|Numéro du groupe.|||
 |`-c, --cellule-groupe <cellule>`|Identifiant de la cellule dans lequel indiquer le numéro du groupe. ex. "A3"|||
 
@@ -59,7 +59,7 @@ Ce script parcours un fichier Excel contenant les grilles d'évaluation d'une cl
 |Paramètre|Description|Obligatoire|Par défaut|
 |-|-|-|-|
 |`-f, --fichier-evaluations <file>`|Fichier Excel dans lequel seront extraites.|Oui||
-|`-t, --template-name <name>`|Nom de la worksheet template, qui sera ignorée.||\_\_TEMPLATE\_\_|
+|`-t, --template-name <name>`|Nom de la worksheet template, qui sera ignorée.||Sheet1|
 |`-d, --destination <folder_name>`|Dossier dans lequel seront enregistrées les grilles d\'évaluation extraites. Ce dossier doit déjà exister.||./grilles/|
 
 ### Extraction des notes (individuelles)
